@@ -1,0 +1,33 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+node_modules/
+package-lock.json
+dist/
+dist-ssr
+*.local
+build/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+.idea
+.project
+.classpath
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

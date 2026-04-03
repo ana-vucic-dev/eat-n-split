@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A mobile-first, accessible React app for splitting bills with friends, tracking shared expenses, and managing balances.">
+  <meta name="darkreader-lock" content="true">
+  <meta name="color-scheme" content="only light dark">
+  <!-- Open Graph previews -->
+  <meta property="og:title" content="Eat 'n' Split — Bill-Splitting App" />
+  <meta property="og:description" content="A mobile-first, accessible React app for splitting bills with friends, tracking shared expenses, and managing balances." />
+  <meta property="og:image" content="/screenshots/og-hero.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ana-vucic-dev.github.io/eat-n-split/" />
+  <script>
+    (function () {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+  <title>Eat 'n' Split</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Eat 'n' Split" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" crossorigin>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" crossorigin>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="src/main.jsx"></script>
+</body>
+
+</html>

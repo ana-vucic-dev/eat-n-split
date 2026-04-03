@@ -1,0 +1,152 @@
+.btn-container {
+  margin-top: var(--margin-sm);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-container button {
+  flex: 1 1 12rem;
+}
+
+button {
+  font-size: var(--font-md);
+  padding: var(--padding-xs) var(--padding-sm);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  color: var(--text-medium);
+  font-weight: 600;
+}
+
+.dark button.primary {
+  color: var(--secondary-color-dark);
+}
+
+button.secondary {
+  background-color: var(--secondary-color-light);
+  color: var(--text-dark);
+}
+
+button.primary:disabled {
+  background-color: var(--primary-color-disabled);
+  color: var(--secondary-color-dark);
+  cursor: not-allowed;
+}
+
+.back-btn {
+  margin: 0 0 var(--margin-xl);
+  align-self: flex-start;
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  color: var(--text-white);
+}
+
+.sidebar-btn,
+.theme-toggle {
+  width: 10rem;
+  font-weight: 500;
+  color: var(--text-light);
+  background-color: transparent;
+}
+
+.sidebar-btn.active-tab {
+  color: var(--primary-color);
+}
+
+.sidebar-btn:not(.active-tab):active,
+.theme-toggle:active {
+  background-color: var(--secondary-color-medium);
+}
+
+.theme-toggle {
+  align-self: center;
+  margin: var(--margin-sm) 0;
+}
+
+.light-icon {
+  color: var(--secondary-color-light);
+}
+
+.dark-icon {
+  color: var(--primary-color);
+}
+
+button:focus-visible,
+.friend-item-btn:active {
+  outline: var(--primary-outline-2);
+  outline-offset: var(--outline-offset);
+}
+
+button:not(.friend-item-btn):not(:disabled):active {
+  transform: scale(0.98);
+}
+
+button.primary:not(:disabled):active,
+button.primary:not(:disabled):focus-visible {
+  background-color: var(--primary-color-hover);
+}
+
+button.secondary:active,
+button.secondary:focus-visible,
+.friend-item-btn:active,
+.friend-item-btn:focus-visible {
+  background-color: var(--secondary-color-light-hover);
+}
+
+.delete-btn:active {
+  background-color: var(--danger-color-hover);
+}
+
+.delete-btn:focus-visible {
+  background-color: var(--danger-color-hover);
+  outline: var(--danger-outline);
+}
+
+@media (hover: hover) {
+  button.primary:not(:disabled):hover {
+    background-color: var(--primary-color-hover);
+  }
+
+  button.secondary:hover,
+  .friend-item-btn:hover {
+    background-color: var(--secondary-color-light-hover);
+  }
+
+  .delete-btn:hover {
+    background-color: var(--danger-color-hover);
+  }
+
+  .sidebar-btn:not(.active-tab):hover,
+  .theme-toggle:hover {
+    background-color: var(--secondary-color-medium);
+  }
+}
+
+@media screen and (min-width: 340px) {
+  button.rename {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .sidebar-btn {
+    font-size: var(--font-lg);
+    width: 10.318rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-container {
+    margin-top: 0;
+  }
+}
